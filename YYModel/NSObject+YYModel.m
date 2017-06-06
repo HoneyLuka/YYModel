@@ -238,7 +238,7 @@ static force_inline NSDate *YYNSDateFromString(__unsafe_unretained NSString *str
     //    if (string.length > kParserNum) return nil;
     
     //fix too long string length bug.
-    if (string.length > kParserNum) {
+    if (string.length > 25) {
         YYNSDateParseBlock parser = blocks[28];
         return parser(string);
     }
